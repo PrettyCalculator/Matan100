@@ -11,7 +11,7 @@ class TicketBasedExamHelper(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Система навигации по билетам экзамена 2026")
+        self.title("Поиск по конспекту Эльвины")
         self.geometry("1150x850")
         # СВОЙСТВО -topmost УБРАНО: окно теперь ведет себя как обычное
 
@@ -21,9 +21,9 @@ class TicketBasedExamHelper(ctk.CTk):
 
         # Загрузка иконки удаления
         self.delete_icon = None
-        if os.path.exists("delete.png"):
+        if os.path.exists("icons/delete.png"):
             try:
-                pil_img = Image.open("delete.png")
+                pil_img = Image.open("icons/delete.png")
                 self.delete_icon = ctk.CTkImage(light_image=pil_img, dark_image=pil_img, size=(16, 16))
             except Exception as e:
                 print(f"Не удалось загрузить delete.png: {e}")
